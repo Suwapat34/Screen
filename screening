@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบคัดกรองสุขภาพจิต</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #6200ea;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #6200ea;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .question {
+            margin-bottom: 1rem;
+        }
+        .result {
+            background: #e8f5e9;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        button {
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3700b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>แบบคัดกรองสุขภาพจิต</h1>
+    </header>
+    <div class="container">
+        <form id="screeningForm">
+            <!-- แบบคัดกรองความเครียด -->
+            <div class="section" id="stress">
+                <h2>แบบคัดกรองความเครียด (5 ข้อ)</h2>
+                <div class="question">
+                    <label>1. ในช่วง 2 สัปดาห์ที่ผ่านมา คุณมีปัญหาการนอน นอนไม่หลับ หรือนอนมากหรือไม่?</label><br>
+                    <input type="radio" name="stress1" value="0"> ไม่เลย<br>
+                    <input type="radio" name="stress1" value="1"> บางครั้ง<br>
+                    <input type="radio" name="stress1" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="stress1" value="3"> เกือบตลอดเวลา<br>
+                </div>
+               <div class="question">
+        <label for="s2">2.ในช่วง 2 สัปดาห์ที่ผ่านมา คุณรู้สึกมีสมาธิน้อยลงบ่อยแค่ไหน?</label><br>
+        <input type="radio" name="stress2" value="0"> ไม่เคย<br>
+        <input type="radio" name="stress2" value="1"> บางครั้ง<br>
+        <input type="radio" name="stress2" value="2"> บ่อยครั้ง<br>
+        <input type="radio" name="stress2" value="3"> เกือบทุกวัน<br>
+      </div>
+
+      <div class="question">
+        <label for="s3">3.ในช่วง 2 สัปดาห์ที่ผ่านมา คุณรู้สึกว่าไหงุดหงิด/กระวนกระวาย/ว้าวุ่นใจบ่อยแค่ไหน?</label><br>
+        <input type="radio" name="stress3" value="0"> ไม่เคย<br>
+        <input type="radio" name="stress3" value="1"> บางครั้ง<br>
+        <input type="radio" name="stress3" value="2"> บ่อยครั้ง<br>
+        <input type="radio" name="stress3" value="3"> เกือบทุกวัน<br>
+      </div>
+
+
+      <div class="question">
+        <label for="s4">4. ในช่วง 2 สัปดาห์ที่ผ่านมา คุณรู้สึกรู้สึกเบื่อเซ็งบ่อยแค่ไหน?</label><br>
+        <input type="radio" name="stress4" value="0"> ไม่เคย<br>
+        <input type="radio" name="stress4" value="1"> บางครั้ง<br>
+        <input type="radio" name="stress4" value="2"> บ่อยครั้ง<br>
+        <input type="radio" name="stress4" value="3"> เกือบทุกวัน<br>
+      </div>
+
+      <div class="question">
+        <label for="s5">5. ในช่วง 2 สัปดาห์ที่ผ่านมา คุณรู้สึกไม่อยากพบปะผู้คนบ่อยแค่ไหน?</label><br>
+        <input type="radio" name="stress5" value="0"> ไม่เคย<br>
+        <input type="radio" name="stress5" value="1"> บางครั้ง<br>
+        <input type="radio" name="stress5" value="2"> บ่อยครั้ง<br>
+        <input type="radio" name="stress5" value="3"> เกือบทุกวัน<br>
+      </div>
+
+            </div>
+
+            <!-- แบบคัดกรองภาวะซึมเศร้า -->
+            <div class="section" id="depression">
+                <h2>แบบคัดกรองภาวะซึมเศร้า (9 ข้อ)</h2>
+                <div class="question">
+                    <label>1. คุณรู้สึกเบื่อ ไม่สนใจอยากทำอะไร บ่อยแค่ไหน?</label><br>
+                    <input type="radio" name="depression1" value="0" required> ไม่เคย<br>
+                    <input type="radio" name="depression1" value="1"> บางครั้ง<br>
+                    <input type="radio" name="depression1" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="depression1" value="3"> เกือบทุกวัน<br>
+                  </div>
+                  <div class="question">
+                    <label>2. คุณรู้สึกว่าไม่สบายใจ ซึมเศร้า ท้อแท้ บ่อยแค่ไหน?</label><br>
+                    <input type="radio" name="depression2" value="0" required> ไม่เคย<br>
+                    <input type="radio" name="depression2" value="1"> บางครั้ง<br>
+                    <input type="radio" name="depression2" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="depression2" value="3"> เกือบทุกวัน<br>
+                  </div>
+                  <div class="question">
+                    <label>3. คุณรู้สึกหลับยาก หรือหลับๆ ตื่นๆ หรือหลับมากไปบ่อยแค่ไหน?</label><br>
+                    <input type="radio" name="depression3" value="0" required> ไม่เคย<br>
+                    <input type="radio" name="depression3" value="1"> บางครั้ง<br>
+                    <input type="radio" name="depression3" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="depression3" value="3"> เกือบทุกวัน<br>
+                  </div>
+                  <div class="question">
+                    <label>4. คุณรู้สึกเหนื่อยง่าย หรือ ไม่ค่อยมีแรงบ่อยแค่ไหน?</label><br>
+                    <input type="radio" name="depression4" value="0" required> ไม่เคย<br>
+                    <input type="radio" name="depression4" value="1"> บางครั้ง<br>
+                    <input type="radio" name="depression4" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="depression4" value="3"> เกือบทุกวัน<br>
+                  </div>
+                  <div class="question">
+                    <label>5. คุณมีเบื่ออาหาร หรือกินมากเกินไปบ่อยแค่ไหน?</label><br>
+                    <input type="radio" name="depression5" value="0" required> ไม่เคย<br>
+                    <input type="radio" name="depression5" value="1"> บางครั้ง<br>
+                    <input type="radio" name="depression5" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="depression5" value="3"> เกือบทุกวัน<br>
+                  </div>
+                  <div class="question">
+                    <label>6. คุณรู้สึกไม่ดีกับตัวเอง คิดว่าตัวเองล้มเหลว หรือทำให้ตนเองหรือครอบครัวผิดหวังบ่อยแค่ไหน?</label><br>
+                    <input type="radio" name="depression6" value="0" required> ไม่เคย<br>
+                    <input type="radio" name="depression6" value="1"> บางครั้ง<br>
+                    <input type="radio" name="depression6" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="depression6" value="3"> เกือบทุกวัน<br>
+                  </div>
+                  <div class="question">
+                    <label>7. คุณสมาธิไม่ดีเวลาทำอะไร เช่น ดูโทรทัศน์ ฟังวิทยุ หรือทำงานที่ต้องใช้ความตั้งใจ?</label><br>
+                    <input type="radio" name="depression7" value="0" required> ไม่เคย<br>
+                    <input type="radio" name="depression7" value="1"> บางครั้ง<br>
+                    <input type="radio" name="depression7" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="depression7" value="3"> เกือบทุกวัน<br>
+                  </div>
+                  <div class="question">
+                    <label>8. คุณรู้สึกพูดช้า ทำอะไรช้าลง จนคนอื่นสังเกตเห็นได้ หรือกระสับกระส่ายไม่สามารถอยู่นิ่งได้เหมือนที่เคยเป็น?</label><br>
+                    <input type="radio" name="depression8" value="0" required> ไม่เคย<br>
+                    <input type="radio" name="depression8" value="1"> บางครั้ง<br>
+                    <input type="radio" name="depression8" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="depression8" value="3"> เกือบทุกวัน<br>
+                  </div>
+                  <div class="question">
+                    <label>9. คุณรู้สึกคิดทำร้ายตนเอง หรือคิดว่าถ้าตายไปคงจะดี?</label><br>
+                    <input type="radio" name="depression9" value="0" required> ไม่เคย<br>
+                    <input type="radio" name="depression9" value="1"> บางครั้ง<br>
+                    <input type="radio" name="depression9" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="depression9" value="3"> เกือบทุกวัน<br>
+                  </div>
+            </div>
+
+            <!-- แบบคัดกรองภาวะเบื่อหน่าย -->
+            <div class="section" id="burnout">
+                <h2>แบบคัดกรองภาวะเบื่อหน่าย (3 ข้อ)</h2>
+                <div class="question">
+                    <label for="b1">1. คุณรู้สึกขาดแรงใจ/ความกระตือรือร้น?</label><br>
+                    <input type="radio" name="b1" value="0"> ไม่เคย<br>
+                    <input type="radio" name="b1" value="1"> บางครั้ง<br>
+                    <input type="radio" name="b1" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="b1" value="3"> เกือบทุกวัน<br>
+                  </div>
+            
+                  <div class="question">
+                    <label for="b2">2. คุณรู้สึกไม่อยากสนใจคนรอบข้าง?</label><br>
+                    <input type="radio" name="b2" value="0"> ไม่เคย<br>
+                    <input type="radio" name="b2" value="1"> บางครั้ง<br>
+                    <input type="radio" name="b2" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="b2" value="3"> เกือบทุกวัน<br>
+                  </div>
+            
+                  <div class="question">
+                    <label for="b3">3. คุณรู้สึกไม่ประสบความสำเร็จเท่าที่ควร?</label><br>
+                    <input type="radio" name="b3" value="0"> ไม่เคย<br>
+                    <input type="radio" name="b3" value="1"> บางครั้ง<br>
+                    <input type="radio" name="b3" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="b3" value="3"> เกือบทุกวัน<br>
+                  </div>
+                <!-- เพิ่มคำถามที่เหลืออีก 2 ข้อ -->
+            </div>
+
+            <!-- แบบคัดกรองภาวะวิตกกังวล -->
+            <div class="section" id="anxiety">
+                <h2>แบบคัดกรองภาวะวิตกกังวล (7 ข้อ)</h2>
+                <div class="question">
+                    <label for="a1">1. คุณรู้สึกตึงเครียด วิตกกังวล หรือกระวนกระวายบ่อยแค่ไหน?</label><br>
+                    <input type="radio" name="a1" value="0"> ไม่เคย<br>
+                    <input type="radio" name="a1" value="1"> บางครั้ง<br>
+                    <input type="radio" name="a1" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="a1" value="3"> เกือบทุกวัน<br>
+                  </div>
+            
+                  <div class="question">
+                    <label for="a2">2. คุณรู้สึกไม่สามารถหยุดหรือควบคุมความกังวลได้บ่อยแค่ไหน?</label><br>
+                    <input type="radio" name="a2" value="0"> ไม่เคย<br>
+                    <input type="radio" name="a2" value="1"> บางครั้ง<br>
+                    <input type="radio" name="a2" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="a2" value="3"> เกือบทุกวัน<br>
+                  </div>
+            
+                  <div class="question">
+                    <label for="a3">3. คุณรู้สึกกังวลมากเกินไปในเรื่องต่างๆบ่อยแค่ไหน?</label><br>
+                    <input type="radio" name="a3" value="0"> ไม่เคย<br>
+                    <input type="radio" name="a3" value="1"> บางครั้ง<br>
+                    <input type="radio" name="a3" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="a3" value="3"> เกือบทุกวัน<br>
+                  </div>
+            
+                  <div class="question">
+                    <label for="a4">4. คุณรู้สึกทำตัวให้ผ่อนคลายได้ยาก?</label><br>
+                    <input type="radio" name="a4" value="0"> ไม่เคย<br>
+                    <input type="radio" name="a4" value="1"> บางครั้ง<br>
+                    <input type="radio" name="a4" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="a4" value="3"> เกือบทุกวัน<br>
+                  </div>
+            
+                  <div class="question">
+                    <label for="a5">5. คุณรู้สึกกระสับกระส่ายจนไม่สามารถนั่งนิ่งๆได้?</label><br>
+                    <input type="radio" name="a5" value="0"> ไม่เคย<br>
+                    <input type="radio" name="a5" value="1"> บางครั้ง<br>
+                    <input type="radio" name="a5" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="a5" value="3"> เกือบทุกวัน<br>
+                  </div>
+            
+                  <div class="question">
+                    <label for="a6">6. คุณรู้สึกเครียดเกี่ยวกับสถานการณ์ที่ไม่สามารถควบคุมได้บ่อยแค่ไหน?</label><br>
+                    <input type="radio" name="a6" value="0"> ไม่เคย<br>
+                    <input type="radio" name="a6" value="1"> บางครั้ง<br>
+                    <input type="radio" name="a6" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="a6" value="3"> เกือบทุกวัน<br>
+                  </div>
+            
+                  <div class="question">
+                    <label for="a7">7. คุณรู้สึกกลัวเหมือนจะมีอะไรร้ายๆเกิดขึ้นบ่อยแค่ไหน?</label><br>
+                    <input type="radio" name="a7" value="0"> ไม่เคย<br>
+                    <input type="radio" name="a7" value="1"> บางครั้ง<br>
+                    <input type="radio" name="a7" value="2"> บ่อยครั้ง<br>
+                    <input type="radio" name="a7" value="3"> เกือบทุกวัน<br>
+                  </div>
+            </div>
+
+            <button type="button" onclick="calculateResults()">แปลผล</button>
+        </form>
+
+        <div id="results" class="result" style="display: none;">
+            <h2>ผลการประเมินของคุณ</h2>
+            <p id="stressResult"></p>
+            <p id="depressionResult"></p>
+            <p id="burnoutResult"></p>
+            <p id="anxietyResult"></p>
+            <p id="recommendation"></p>
+        </div>
+    </div>
+
+    <script>
+        function calculateResults() {
+            const form = document.getElementById('screeningForm');
+            let stressScore = 0, depressionScore = 0, burnoutScore = 0, anxietyScore = 0;
+
+            // คำนวณคะแนน
+            for (let i = 1; i <= 5; i++) {
+                stressScore += parseInt(form[`stress${i}`]?.value || 0);
+            }
+
+            for (let i = 1; i <= 9; i++) {
+                depressionScore += parseInt(form[`depression${i}`]?.value || 0);
+            }
+
+            for (let i = 1; i <= 3; i++) {
+                burnoutScore += parseInt(form[`burnout${i}`]?.value || 0);
+            }
+
+            for (let i = 1; i <= 7; i++) {
+                anxietyScore += parseInt(form[`anxiety${i}`]?.value || 0);
+            }
+
+            // แสดงผลคะแนน
+            document.getElementById('stressResult').innerText = `คะแนนความเครียด: ${stressScore} - ${interpretStress(stressScore)}`;
+            document.getElementById('depressionResult').innerText = `คะแนนภาวะซึมเศร้า: ${depressionScore} - ${interpretDepression(depressionScore)}`;
+            document.getElementById('burnoutResult').innerText = `คะแนนภาวะเบื่อหน่าย: ${burnoutScore} - ${interpretBurnout(burnoutScore)}`;
+            document.getElementById('anxietyResult').innerText = `คะแนนภาวะวิตกกังวล: ${anxietyScore} - ${interpretAnxiety(anxietyScore)}`;
+
+            // คำแนะนำ
+            document.getElementById('recommendation').innerText = generateRecommendations(stressScore, depressionScore, burnoutScore, anxietyScore);
+
+            document.getElementById('results').style.display = 'block';
+        }
+
+        function interpretStress(score) {
+            if (score <= 5) return 'น้อย';
+            else if (score <= 10) return 'ปานกลาง';
+            else return 'สูง';
+        }
+
+        function interpretDepression(score) {
+            if (score <= 9) return 'น้อย';
+            else if (score <= 14) return 'ปานกลาง';
+            else if (score <= 19) return 'มาก';
+            else return 'รุนแรง';
+        }
+
+        function interpretBurnout(score) {
+            if (score <= 3) return 'น้อย';
+            else if (score <= 6) return 'ปานกลาง';
+            else return 'สูง';
+        }
+
+        function interpretAnxiety(score) {
+            if (score <= 7) return 'น้อย';
+            else if (score <= 14) return 'ปานกลาง';
+            else if (score <= 21) return 'มาก';
+            else return 'รุนแรง';
+        }
+
+        function generateRecommendations(stress, depression, burnout, anxiety) {
+            let recommendation = "คำแนะนำของคุณคือ: \n";
+
+            if (stress > 10) {
+                recommendation += "ควรหาเวลาพักผ่อน ทำกิจกรรมที่ผ่อนคลาย และปรึกษาผู้เชี่ยวชาญหากจำเป็น. \n";
+            }
+            if (depression > 14) {
+                recommendation += "ควรปรึกษานักจิตวิทยาหรือจิตแพทย์ เพื่อประเมินภาวะซึมเศร้าอย่างละเอียด. \n";
+            }
+            if (burnout > 6) {
+                recommendation += "ควรหาเวลาพักผ่อน และปรึกษาผู้เชี่ยวชาญหากอาการยังคงอยู่. \n";
+            }
+            if (anxiety > 14) {
+                recommendation += "ควรทำกิจกรรมที่ช่วยลดความวิตกกังวล เช่น การฝึกหายใจ และพิจารณาปรึกษาผู้เชี่ยวชาญ. \n";
+            }
+
+            return recommendation || "ผลการประเมินของคุณอยู่ในเกณฑ์ปกติ ไม่ต้องกังวลนะคะ.";
+        }
+    </script>
+</body>
+</html>
